@@ -1,6 +1,9 @@
 package AmazonTestCases;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -23,9 +26,12 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -37,6 +43,7 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 public class TestCases extends BaseClass {
 
 	WebDriver driver;
+	SoftAssert softassert;
 	@BeforeMethod
 	public void initilization()
 	{
@@ -44,6 +51,7 @@ public class TestCases extends BaseClass {
 		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
 		System.out.println("b4 method example");
+		softassert=new SoftAssert();
 	}
 		
 	
@@ -158,6 +166,7 @@ public class TestCases extends BaseClass {
 		
 		
 		boolean searchboxstatus=driver.findElement(By.id("twotabsearchtextbox")).isDisplayed();
+		AssertJUnit.assertEquals(searchboxstatus, true);
 		System.out.println(searchboxstatus);
 		boolean locationstatus=driver.findElement(By.id("nav-search-submit-button")).isEnabled();
 		System.out.println(locationstatus);
@@ -180,6 +189,7 @@ public class TestCases extends BaseClass {
 				
 		driver.switchTo().window(parentwindow);
 		driver.navigate().refresh();
+		softassert.assertAll();//mandatory if we use softassert
 				
 	}
 	
@@ -272,16 +282,19 @@ public class TestCases extends BaseClass {
 		
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void TC09()
 	{
 		JavascriptExecutor executer= (JavascriptExecutor)driver;
 		executer.executeScript("window.scrollBy(0,250)");
+		boolean status=driver.findElement(By.xpath("//span[@class='nav-cart-icon nav-sprite']")).isDisplayed();
+		AssertJUnit.assertEquals(status, true);
+		
 		System.out.println("TC07");
 	}
 	
-	@Test
-	public void TC10()
+	/*@Test
+	public void TC10() 
 	{
 		System.out.println("TC10");
 	}
@@ -314,4 +327,71 @@ public class TestCases extends BaseClass {
 	{
 		System.out.println("after method ");
 	} 
+	
+	@BeforeClass
+	public void beforClass()
+	{
+		System.out.println("B4 class");
+	}
+	
+	@AfterClass
+	public void afterClass()
+	{
+		System.out.println("After class");
+	} */
+	
+	@Test
+	public  void tc_assertions()
+	{
+		driver.get("https://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("hyr tutorials",Keys.ENTER);
+		String expectedTitle="hyr tutorials - Google Searchhhh";
+		String actualTitle =driver.getTitle();					
+		System.out.println(expectedTitle);
+		System.out.println(actualTitle);
+		AssertJUnit.assertEquals(expectedTitle, actualTitle,"Title is mismatched");
+	}
+	@Test
+	public  void tc_softassertions() throws Exception 
+	{
+		driver.get("https://www.facebook.com/");
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("hyr tutorials",Keys.ENTER);
+		Thread.sleep(5000);
+		
+		
+		//title assertion 
+		String actualtitile=driver.getTitle();
+		String expectedTitle="Facebook – log in or sign up";
+		System.out.println(actualtitile);
+		//Assert.assertEquals(actualtitile, expectedTitle,"Title mismatch"); hard assert
+		softassert.assertEquals(actualtitile, expectedTitle,"Title mismatch");
+		
+		
+		//URL ASSERTION 		
+		String actualurl=driver.getCurrentUrl();
+		String excepctedurl="https://www.facebook.com/";
+		//Assert.assertEquals(actualurl, excepctedurl,"url mismatch"); hard
+		softassert.assertEquals(actualurl, excepctedurl,"url mismatch");
+		
+		//title ASSERTION
+		String actualtext=driver.findElement(By.xpath("//input[@id='email']")).getAttribute("value");
+		String expectedtext="";
+		//Assert.assertEquals(actualurl, excepctedurl,"text mismatch");
+		softassert.assertEquals(actualurl, excepctedurl,"text mismatch"); 
+		
+		//boarder  ASSERTION
+		String actualboarder=driver.findElement(By.name("email")).getCssValue("border");
+		String expectedboarder="1px solid rgb(240, 40, 73)";
+		System.out.println(actualboarder);
+		//Assert.assertEquals(actualboarder, expectedboarder,"boarder mismatch");
+		softassert.assertEquals(actualboarder, expectedboarder,"boarder mismatch");
+		
+	   //error message  ASSERTION
+		String actualerror=driver.findElement(By.xpath("(//div[@id='email_container']//child::div)[2]")).getText();
+		String expectederror="1The email address or mobile number you entered isn't connected to an account. Find your account and log in";
+		//Assert.assertEquals(actualerror, expectederror,"error message  mismatch");
+		softassert.assertEquals(actualerror, expectederror,"error message  mismatch"); 
+		
+		softassert.assertAll();// exception will throw at teh end of teh test 
+	}
 }

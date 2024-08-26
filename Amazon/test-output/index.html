@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Lenovo\git\Automation\Amazon\testng.xml</span>
+                    <span>C:\Users\Lenovo\git\Automatn_athira_updated\Amazon\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="AmazonTestCases.TestCases" class="method navigator-link" hash-for-method="TC08">TC08</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="AmazonTestCases.TestCases" class="method navigator-link" hash-for-method="tc_softassertions">tc_softassertions</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -126,29 +126,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC08">
-                  </a> <!-- TC08 -->
-                  <span class="method-name">TC08</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=127.0.6533.120)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [863d5fdd85ad3f2a4692d7996eae2321, executeScript {script=arguments[0], args=[{element-6066-11e4-a52e-4f735466cecf=f.17FDC31AC9DDE5052E87FC12A7CEACAB.d.9FEBE2BCE515571CA5F41D6CB8478FB2.e.2}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58719}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58719/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 863d5fdd85ad3f2a4692d7996eae2321
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
-	at AmazonTestCases.TestCases.TC08(TestCases.java:247)
+                  <a name="tc_softassertions">
+                  </a> <!-- tc_softassertions -->
+                  <span class="method-name">tc_softassertions</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	Title mismatch expected [Facebook – log in or sign up] but found [Get back on Facebook],
+	url mismatch expected [https://www.facebook.com/] but found [https://www.facebook.com/recover/account/]
+	at AmazonTestCases.TestCases.tc_softassertions(TestCases.java:395)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -157,7 +143,7 @@ Session ID: 863d5fdd85ad3f2a4692d7996eae2321
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Lenovo\git\Automation\Amazon\testng.xml</span>
+            <span class="header-content">C:\Users\Lenovo\git\Automatn_athira_updated\Amazon\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -168,7 +154,7 @@ Session ID: 863d5fdd85ad3f2a4692d7996eae2321
     &lt;classes&gt;
       &lt;class name=&quot;AmazonTestCases.TestCases&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC08&quot;/&gt;
+          &lt;include name=&quot;tc_softassertions&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- AmazonTestCases.TestCases --&gt;
     &lt;/classes&gt;
@@ -212,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC08')
+data.setCell(0, 1, 'tc_softassertions')
 data.setCell(0, 2, 'AmazonTestCases.TestCases')
-data.setCell(0, 3, 10294);
+data.setCell(0, 3, 7564);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,29 +220,31 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">AmazonTestCases.TestCases</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC06</span>
-                <br/>
-                <span class="ignored-method-name">TC05</span>
-                <br/>
                 <span class="ignored-method-name">TC07</span>
                 <br/>
-                <span class="ignored-method-name">TC02</span>
+                <span class="ignored-method-name">TC08</span>
                 <br/>
-                <span class="ignored-method-name">TC01</span>
+                <span class="ignored-method-name">tc_assertions</span>
                 <br/>
-                <span class="ignored-method-name">TC04</span>
+                <span class="ignored-method-name">TC09</span>
                 <br/>
                 <span class="ignored-method-name">TC03</span>
                 <br/>
-                <span class="ignored-method-name">TC10</span>
+                <span class="ignored-method-name">TC04</span>
                 <br/>
-                <span class="ignored-method-name">TC09</span>
+                <span class="ignored-method-name">TC05</span>
+                <br/>
+                <span class="ignored-method-name">TC06</span>
+                <br/>
+                <span class="ignored-method-name">TC01</span>
+                <br/>
+                <span class="ignored-method-name">TC02</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -269,36 +257,16 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">AmazonTestCases.TestCases</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforSuitExample</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTestExample</span>
-                <span class="method-start">36 ms</span>
-              </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initilization</span>
-                <span class="method-start">106 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TC08</span>
-                <span class="method-start">6836 ms</span>
+                <span class="method-name">tc_softassertions</span>
+                <span class="method-start">10862 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethodExample</span>
-                <span class="method-start">17145 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTestExample</span>
-                <span class="method-start">17159 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuitExample</span>
-                <span class="method-start">17572 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

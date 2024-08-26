@@ -5,12 +5,7 @@
     <classes>
       <class name="AmazonTestCases.TestCases">
         <methods>
-          <include name="afterSuitExample"/>
-          <include name="afterTestExample"/>
-          <include name="beforeTestExample"/>
-          <include name="beforSuitExample"/>
-          <include name="afterMethodExample"/>
-          <include name="TC08"/>
+          <include name="tc_softassertions"/>
           <include name="initilization"/>
         </methods>
       </class> <!-- AmazonTestCases.TestCases -->

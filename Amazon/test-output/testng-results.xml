@@ -2,58 +2,29 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-22T17:39:27 IST" name="Suite" finished-at="2024-08-22T17:39:44 IST" duration-ms="17139">
+  <suite started-at="2024-08-25T21:22:20 IST" name="Suite" finished-at="2024-08-25T21:22:39 IST" duration-ms="18515">
     <groups>
     </groups>
-    <test started-at="2024-08-22T17:39:27 IST" name="Test" finished-at="2024-08-22T17:39:44 IST" duration-ms="17139">
+    <test started-at="2024-08-25T21:22:20 IST" name="Test" finished-at="2024-08-25T21:22:39 IST" duration-ms="18515">
       <class name="AmazonTestCases.TestCases">
-        <test-method is-config="true" signature="beforSuitExample()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:27 IST" name="beforSuitExample" finished-at="2024-08-22T17:39:27 IST" duration-ms="19" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforSuitExample -->
-        <test-method is-config="true" signature="beforeTestExample()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:27 IST" name="beforeTestExample" finished-at="2024-08-22T17:39:27 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestExample -->
-        <test-method is-config="true" signature="initilization()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:27 IST" name="initilization" finished-at="2024-08-22T17:39:34 IST" duration-ms="6728" status="PASS">
+        <test-method is-config="true" signature="initilization()[pri:0, instance:AmazonTestCases.TestCases@2034b64c]" started-at="2024-08-25T21:22:20 IST" name="initilization" finished-at="2024-08-25T21:22:31 IST" duration-ms="10857" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilization -->
-        <test-method signature="TC08()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:34 IST" name="TC08" finished-at="2024-08-22T17:39:44 IST" duration-ms="10294" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method signature="tc_softassertions()[pri:0, instance:AmazonTestCases.TestCases@2034b64c]" started-at="2024-08-25T21:22:31 IST" name="tc_softassertions" finished-at="2024-08-25T21:22:39 IST" duration-ms="7564" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=127.0.6533.120)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [863d5fdd85ad3f2a4692d7996eae2321, executeScript {script=arguments[0], args=[{element-6066-11e4-a52e-4f735466cecf=f.17FDC31AC9DDE5052E87FC12A7CEACAB.d.9FEBE2BCE515571CA5F41D6CB8478FB2.e.2}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58719}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58719/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 863d5fdd85ad3f2a4692d7996eae2321]]>
+              <![CDATA[The following asserts failed:
+Title mismatch expected [Facebook – log in or sign up] but found [Get back on Facebook],
+url mismatch expected [https://www.facebook.com/] but found [https://www.facebook.com/recover/account/]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=127.0.6533.120)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [863d5fdd85ad3f2a4692d7996eae2321, executeScript {script=arguments[0], args=[{element-6066-11e4-a52e-4f735466cecf=f.17FDC31AC9DDE5052E87FC12A7CEACAB.d.9FEBE2BCE515571CA5F41D6CB8478FB2.e.2}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58719}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58719/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 863d5fdd85ad3f2a4692d7996eae2321
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
-at AmazonTestCases.TestCases.TC08(TestCases.java:247)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Title mismatch expected [Facebook – log in or sign up] but found [Get back on Facebook],
+url mismatch expected [https://www.facebook.com/] but found [https://www.facebook.com/recover/account/]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at AmazonTestCases.TestCases.tc_softassertions(TestCases.java:395)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -82,22 +53,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC08 -->
-        <test-method is-config="true" signature="afterMethodExample()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:44 IST" name="afterMethodExample" finished-at="2024-08-22T17:39:44 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethodExample -->
-        <test-method is-config="true" signature="afterTestExample()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:44 IST" name="afterTestExample" finished-at="2024-08-22T17:39:44 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestExample -->
-        <test-method is-config="true" signature="afterSuitExample()[pri:0, instance:AmazonTestCases.TestCases@4d1c005e]" started-at="2024-08-22T17:39:45 IST" name="afterSuitExample" finished-at="2024-08-22T17:39:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuitExample -->
+        </test-method> <!-- tc_softassertions -->
       </class> <!-- AmazonTestCases.TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
